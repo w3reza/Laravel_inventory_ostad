@@ -19,7 +19,7 @@
     <script src="{{asset('backend/js/jquery-3.7.0.min.js')}}"></script>
     <script src="{{asset('backend/js/jquery.dataTables.min.js')}}"></script>
 
-
+    {{-- <script src="https://cdn.tiny.cloud/1/3i0ca86or9t4pfvr99nwogttx7zt77kpfvg6y7bh1ulp09z6/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script> --}}
     <script src="{{asset('backend/js/toastify-js.js')}}"></script>
     <script src="{{asset('backend/js/axios.min.js')}}"></script>
     <script src="{{asset('backend/js/config.js')}}"></script>
@@ -29,7 +29,9 @@
         if(localStorage.getItem('token')===null){
             window.location.href="/login";
         }
+        // tinymce.init({selector:'textarea'});
     </script>
+
 
 
 
@@ -83,7 +85,7 @@
         <span class="side-bar-item-caption">Dashboard</span>
     </a>
 
-    <a href="{{url("/customerPage")}}" class="side-bar-item">
+    <a href="{{url("/customer_list")}}" class="side-bar-item">
         <i class="bi bi-people"></i>
         <span class="side-bar-item-caption">Customer</span>
     </a>
@@ -93,7 +95,7 @@
         <span class="side-bar-item-caption">Category</span>
     </a>
 
-    <a href="{{url("/productPage")}}" class="side-bar-item">
+    <a href="{{url("/product_list")}}" class="side-bar-item">
         <i class="bi bi-bag"></i>
         <span class="side-bar-item-caption">Product</span>
     </a>
